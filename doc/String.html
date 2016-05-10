@@ -190,7 +190,7 @@ digit of specified base; otherwise nil</p>
             <pre><span class="ruby-comment"># File atoi.rb, line 143</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ascii_lookup</span>(<span class="ruby-identifier">ascii_character</span>, <span class="ruby-identifier">base</span>=<span class="ruby-value">10</span>)
         <span class="ruby-identifier">@@ascii_hash</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">base</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-identifier">v</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ascii_character</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">v</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ascii_character</span>.<span class="ruby-identifier">downcase</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -248,7 +248,7 @@ otherwise false</p>
             <pre><span class="ruby-comment"># File atoi.rb, line 125</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">is_digit?</span>(<span class="ruby-identifier">ascii_character</span>, <span class="ruby-identifier">base</span>=<span class="ruby-value">10</span>)
         <span class="ruby-identifier">@@ascii_hash</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">base</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
-                <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ascii_character</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ascii_character</span>.<span class="ruby-identifier">downcase</span>
         <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>

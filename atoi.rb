@@ -124,7 +124,7 @@ class String
 	#- This method contains no additional error checking
 	def self.is_digit?(ascii_character, base=10)
 		@@ascii_hash.sort.slice(0,base).each do |k,v|
-			return true if k == ascii_character
+			return true if k == ascii_character.downcase
 		end
 		return false
 	end
@@ -142,7 +142,7 @@ class String
 	#- This method contains no additional error checking
 	def self.ascii_lookup(ascii_character, base=10)
 		@@ascii_hash.sort.slice(0,base).each do |k,v|
-			return v if k == ascii_character
+			return v if k == ascii_character.downcase
 		end
 	end
 end	

@@ -30,7 +30,7 @@ This is what you need to do to use this custom Atoi class:
 # Require the atoi.rb file in your program with the correct pathname
 require './atoi'
 
-# Call the convert method to return an integer from any number containing string
+# Call the atoi method on a string object to return an integer from any number containing string
 '123abc456'.atoi # This will return 123
 'abc456'.atoi # This will return 456
 '12.3abc456'.atoi # This will return 12; note that only whole integers are returned
@@ -41,4 +41,4 @@ require './atoi'
 
 ## The Author
 
-This custom Atoi class was created by Carl Andrew Menning
+This custom atoi String method was created by Carl Andrew Menning
