@@ -91,9 +91,22 @@
 
   <section class="description">
     
-<p>The <a href="Atoi.html">Atoi</a> class converts a string containing
-integers and returns the first grouping of integers  as an integer data
-type.</p>
+<p>The <a href="Atoi.html">Atoi</a> (Ascii TO Integer) class contain custom
+methods to analyze a  string containing integers and return the first
+grouping of integers  as an integer data type.  This integer grouping does
+not need to be the first character, but the conversion will stop upon
+hitting the first non-integer ascii character following the first detected
+integer character.</p>
+<dl class="rdoc-list note-list"><dt>Author
+<dd>
+<p>Carl Andrew Menning</p>
+</dd><dt>Version
+<dd>
+<p>0.0.1</p>
+</dd><dt>License
+<dd>
+<p>Distributes under the same terms as Ruby</p>
+</dd></dl>
 
   </section>
 
@@ -152,7 +165,7 @@ within 0-9.  For all other inputs, it returns nil.</p>
 
           
           <div class="method-source-code" id="ascii_lookup-source">
-            <pre><span class="ruby-comment"># File atoi.rb, line 99</span>
+            <pre><span class="ruby-comment"># File atoi.rb, line 97</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">ascii_lookup</span>(<span class="ruby-identifier">ascii_character</span>)
         <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ascii_hash</span>[<span class="ruby-identifier">ascii_character</span>]
 <span class="ruby-keyword">end</span></pre>
@@ -201,7 +214,7 @@ numbers.</p>
 
           
           <div class="method-source-code" id="convert-source">
-            <pre><span class="ruby-comment"># File atoi.rb, line 36</span>
+            <pre><span class="ruby-comment"># File atoi.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">num_str</span>)
         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Input is required to be a String&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">num_str</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
         <span class="ruby-identifier">first_group</span> = <span class="ruby-keyword">false</span>
@@ -263,7 +276,7 @@ hash variable @@ascii_hash.  The current version searches for 0-9.</p>
 
           
           <div class="method-source-code" id="is_digit-3F-source">
-            <pre><span class="ruby-comment"># File atoi.rb, line 85</span>
+            <pre><span class="ruby-comment"># File atoi.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">is_digit?</span>(<span class="ruby-identifier">character</span>)
         <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@ascii_hash</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">character</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -315,7 +328,7 @@ room for the new “ones” integer. For example:</p>
 
           
           <div class="method-source-code" id="shift_integer_positions-source">
-            <pre><span class="ruby-comment"># File atoi.rb, line 65</span>
+            <pre><span class="ruby-comment"># File atoi.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">shift_integer_positions</span>(<span class="ruby-identifier">old_number</span>)
         <span class="ruby-identifier">adjusted_number</span> = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">old_number</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Fixnum</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">old_number</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Bignum</span>)
         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Input is required to be of type Fixnum or Bignum&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">adjusted_number</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>

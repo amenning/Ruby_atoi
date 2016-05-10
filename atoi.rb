@@ -1,15 +1,12 @@
-# The Atoi (Ascii TO Integer) class contain methods to analyze a 
+# The Atoi (Ascii TO Integer) class contain custom methods to analyze a 
 # string containing integers and return the first grouping of integers 
-# as an integer data type.  The conversion will stop upon hitting the first
-# non-integer ascii character.  
+# as an integer data type.  This integer grouping does not need to be the
+# first character, but the conversion will stop upon hitting the first
+# non-integer ascii character following the first detected integer character.  
 #
 # Author::		Carl Andrew Menning 
 # Version::		0.0.1
 # License::		Distributes under the same terms as Ruby
-
-# The Atoi class converts a string containing integers
-# and returns the first grouping of integers 
-# as an integer data type.
 class Atoi
 	@@ascii_hash = {
 		'0' => 0,
