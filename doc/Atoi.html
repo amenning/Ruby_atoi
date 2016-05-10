@@ -160,18 +160,21 @@ the class variable @@ascii_hash and</p>
 
 <p>returns the Fixnum integer that corresponds to the ascii digits  contained
 within 0-9.  For all other inputs, it returns nil.</p>
+
+<p><strong>Args</strong>          :</p>
 <ul><li>
-<p><strong>Args</strong>       :</p>
+<p><code>ascii_character</code> -&gt; ascii character to convert</p>
+</li></ul>
 
-<pre>- +ascii_character+ -&gt; ascii character to convert</pre>
-</li><li>
 <p><strong>Returns</strong> :</p>
+<ul><li>
+<p>Fixnum integer corresponding to ascii digit, if input is digit; otherwise
+nil</p>
+</li></ul>
 
-<pre>- Fixnum integer corresponding to ascii digit, if input is digit; otherwise nil</pre>
-</li><li>
 <p><strong>Raises</strong>  :</p>
-
-<pre>- This method contains no additional errors</pre>
+<ul><li>
+<p>This method contains no additional error checking</p>
 </li></ul>
           
           
@@ -208,19 +211,24 @@ within 0-9.  For all other inputs, it returns nil.</p>
           <p>The convert method is the main method to analyze a string containing
 integers and return an integer data type containing the first grouping of
 numbers.</p>
+
+<p><strong>Args</strong>          :</p>
 <ul><li>
-<p><strong>Args</strong>       :</p>
+<p><code>num_str</code> -&gt; string containing integers to be converted</p>
+</li></ul>
 
-<pre>- +num_str+ -&gt; string containing integers to be converted</pre>
-</li><li>
 <p><strong>Returns</strong> :</p>
-
-<pre>- if ascii numbers are present, it returns the first grouping of numbers as an integer data type
-- if no ascii numbers are present, it returns nil</pre>
+<ul><li>
+<p>if ascii numbers are present, it returns the first grouping of numbers as
+an integer data type</p>
 </li><li>
-<p><strong>Raises</strong>  :</p>
+<p>if no ascii numbers are present, it returns nil</p>
+</li></ul>
 
-<pre>- +ArgumentError+ -&gt; if input &quot;num_str&quot; parameter is not String type</pre>
+<p><strong>Raises</strong>  :</p>
+<ul><li>
+<p><code>ArgumentError</code> -&gt; if input “num_str” parameter is not String
+type</p>
 </li></ul>
           
           
@@ -271,18 +279,20 @@ numbers.</p>
 
 <p>ascii string character has a corresponding integer defined using the class
 hash variable @@ascii_hash.  The current version searches for 0-9.</p>
+
+<p><strong>Args</strong>          :</p>
 <ul><li>
-<p><strong>Args</strong>       :</p>
+<p><code>character</code> -&gt; ascii character to check</p>
+</li></ul>
 
-<pre>- +character+ -&gt; ascii character to check</pre>
-</li><li>
 <p><strong>Returns</strong> :</p>
+<ul><li>
+<p>true if character is part of the ascii digits 0-9, otherwise false</p>
+</li></ul>
 
-<pre>- true if character is part of the ascii digits 0-9, otherwise false</pre>
-</li><li>
 <p><strong>Raises</strong>  :</p>
-
-<pre>- This method contains no additional errors</pre>
+<ul><li>
+<p>This method contains no additional error checking</p>
 </li></ul>
           
           
@@ -320,21 +330,27 @@ hash variable @@ascii_hash.  The current version searches for 0-9.</p>
 href="Atoi.html#method-i-shift_integer_positions">#shift_integer_positions</a>
 method is the method used to shift current  integers left by one to make
 room for the new “ones” integer. For example:</p>
-
-<pre>- 23 would become 230
-- 358209 would become 3582090</pre>
 <ul><li>
-<p><strong>Args</strong>       :</p>
-
-<pre>- +old_number+ -&gt; current integer to be shifted by 10x</pre>
+<p>23 would become 230</p>
 </li><li>
+<p>358209 would become 3582090</p>
+</li></ul>
+
+<p><strong>Args</strong>          :</p>
+<ul><li>
+<p><code>old_number</code> -&gt; current integer to be shifted by 10x</p>
+</li></ul>
+
 <p><strong>Returns</strong> :</p>
+<ul><li>
+<p>the shifted adjusted number with 0 in the ones integer position and all
+other integers shifted left by one placement</p>
+</li></ul>
 
-<pre>- the shifted adjusted number with 0 in the ones integer position and all other integers shifted left by one placement</pre>
-</li><li>
 <p><strong>Raises</strong>  :</p>
-
-<pre>- +ArgumentError+ -&gt; if input &quot;old_number&quot; is not an integer of Fixnum or Bignum data type</pre>
+<ul><li>
+<p><code>ArgumentError</code> -&gt; if input “old_number” is not an integer of
+Fixnum or Bignum data type</p>
 </li></ul>
           
           
