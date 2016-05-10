@@ -35,7 +35,7 @@ atoi = Atoi.new
 # Call the convert method to return an integer from any number containing string
 atoi.convert('123abc456') # This will return 123
 atoi.convert('abc456') # This will return 456
-atoi.convert('12.abc456') # This will return 12
+atoi.convert('12.3abc456') # This will return 12; note that only whole integers are returned
 atoi.convert('-123abc456') # This will return 123; note the absence of the negative sign
 ```
 
