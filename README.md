@@ -23,9 +23,15 @@ This is what you need to do to use this custom Atoi class:
 
 2.  Download this repository and require the atoi.rb file in your program
 
-3.  Make an instance of the atoi class using Atoi.new
+3.  Make an instance of the atoi class and call the convert method to convert any strings containing numbers
 
-4.  Call the convert method on any string containing numbers that you would like converted into integer data type
+```bash
+# Create an new instance of the atoi class
+atoi = Atoi.new
+
+# Call the convert method to return an integer from any number containing string
+atoi.convert('123abc456') # This will return 123
+```
 
 ## The Author
 
