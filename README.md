@@ -26,6 +26,9 @@ This is what you need to do to use this custom Atoi class:
 3.  Make an instance of the atoi class and call the convert method to convert any strings containing numbers
 
 ```bash
+# Require the atoi.rb file in your program with the correct pathname
+require './atoi'
+
 # Create a new instance of the atoi class
 atoi = Atoi.new
 
