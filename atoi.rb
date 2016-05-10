@@ -1,13 +1,24 @@
 # The Atoi (Ascii TO Integer) class contain custom methods to analyze a 
 # string containing integers and return the first grouping of integers 
 # as an integer data type.  This integer grouping does not need to be the
-# first character, but the conversion will stop upon hitting the first
-# non-integer ascii character following the first detected integer character.  
+# first character, but the conversion will stop upon hitting the first 
+# non-integer ascii character following the first detected integer 
+# character.  The current version will ignore any potential sign indication.  
+#
+# The methods below are also implemenented with the following constraints:
+#
+# "Implement atoi(), a function that converts an ASCII string representing a number
+# into an integer. This should return an integer data type. Not another ASCII string.
+# Do not use functions built into the language. Do not use type casting.
+# - ...without using multiplication
+# - ...using as few conditionals as possible"
+# 
 #
 # Author::		Carl Andrew Menning 
 # Version::		0.0.1
-# License::		Distributes under the same terms as Ruby
+# License::		Distributed under the same terms as Ruby
 class Atoi
+	# Class hash variable containing ascii characters 0-9 as keys and Fixnum integers 0-9 as corresponding values 
 	@@ascii_hash = {
 		'0' => 0,
 		'1' => 1,
