@@ -26,7 +26,7 @@ This is what you need to do to use this custom Atoi class:
 3.  Make an instance of the atoi class and call the convert method to convert any strings containing numbers
 
 ```bash
-# Create an new instance of the atoi class
+# Create a new instance of the atoi class
 atoi = Atoi.new
 
 # Call the convert method to return an integer from any number containing string
