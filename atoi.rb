@@ -10,17 +10,18 @@
 #"Implement atoi(), a function that converts an ASCII string representing a number
 #into an integer. This should return an integer data type. Not another ASCII string.
 #Do not use functions built into the language. Do not use type casting.
-#- ...without using multiplication
-#- ...using as few conditionals as possible"
+#- without using multiplication
+#- using as few conditionals as possible"
 # 
-# The current method uses 6 conditionals; 2 are used for error checking, 2 could be removed if base was always 10
-# The requirement to avoid multiplication allowed for easier conversion to allow adjustable base inputs bewteen 2-36
+#The current method uses 6 conditionals; 2 are used for error checking, 2 could be removed if base was always 10.
+#
+#The requirement to avoid multiplication allowed for easier conversion to allow adjustable base inputs between 2-36.
 #
 #Author::		Carl Andrew Menning 
 #Version::		0.0.1
 #License::		Distributed under the same terms as Ruby
 class String
-	#Class hash variable containing ascii characters 0-9 as keys and Fixnum integers 0-9 as corresponding values 
+	#Class hash variable containing ascii characters 0-z as keys and Fixnum integers 0-35 as corresponding values 
 	@@ascii_hash = {
 		'0' => 0,
 		'1' => 1,
