@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require './atoi'
 
 describe "Atoi" do
